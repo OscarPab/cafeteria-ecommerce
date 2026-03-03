@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/logo.jpg';
+import logo from '../assets/logo.jpg';
 
 const Footer = () => {
   const openSocial = (url) => {
@@ -50,15 +50,16 @@ const Footer = () => {
               <span>📍</span>
               <div>
                 <strong>Café El Catador</strong><br />
-                Carretera Federal México-Veracruz Km 45<br />
-                Coatepec, Veracruz, México
+                Zaragoza 146, Col Centro<br />
+                Xicotepec de Juárez, Puebla<br />
+                C.P. 73080
               </div>
             </li>
             <li>
               <span>📞</span>
               <div>
                 <strong>Teléfono:</strong><br />
-                +52 (228) 123-4567
+                +52 (776) 123-4567
               </div>
             </li>
             <li>
@@ -79,16 +80,17 @@ const Footer = () => {
           </ul>
 
           <div className="footer-social">
-            <a href="#" className="social-icon" onClick={(e) => { e.preventDefault(); openSocial('https://facebook.com'); }}>📘</a>
-            <a href="#" className="social-icon" onClick={(e) => { e.preventDefault(); openSocial('https://instagram.com'); }}>📷</a>
-            <a href="#" className="social-icon" onClick={(e) => { e.preventDefault(); openSocial('https://twitter.com'); }}>🐦</a>
-            <a href="#" className="social-icon" onClick={(e) => { e.preventDefault(); openSocial('https://youtube.com'); }}>▶️</a>
+            <button className="social-icon" onClick={() => openSocial('https://facebook.com')}>📘</button>
+            <button className="social-icon" onClick={() => openSocial('https://instagram.com')}>📷</button>
+            <button className="social-icon" onClick={() => openSocial('https://twitter.com')}>🐦</button>
+            <button className="social-icon" onClick={() => openSocial('https://youtube.com')}>▶️</button>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Café El Catador - Román Valderrábano. Todos los derechos reservados.</p>
+        <p>Zaragoza 146, Col Centro, Xicotepec de Juárez, Pue. C.P. 73080</p>
         <p>Diseñado con <span>❤️</span> y <span>☕</span> para los amantes del café</p>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Image360 from '../components/Image360';
+
+import Carrusel360 from '../components/Carrusel360';
 
 const Tours = () => {
   const [formData, setFormData] = useState({
@@ -168,7 +169,7 @@ const Tours = () => {
                 <div className="tours-info-text">
                   <h2>Conoce Nuestra Finca</h2>
                   <p>
-                    Ubicada en las montañas de Veracruz, nuestra finca es el hogar de los mejores 
+                    Ubicada en las montañas de Xicotepec de Juárez, Puebla, nuestra finca es el hogar de los mejores 
                     granos de café de México. Te invitamos a conocer el proceso completo, desde 
                     la semilla hasta la taza.
                   </p>
@@ -281,7 +282,7 @@ const Tours = () => {
 
               <div className="tours-360-preview">
                 <h3>Recorrido Virtual 360°</h3>
-                <Image360 />
+                <Carrusel360 />
               </div>
 
               <div className="galeria-grid">

@@ -2,21 +2,20 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { AuthContext } from '../context/AuthContext';
-import logo from '../assets/images/logo.jpg';
+import logo from '../assets/logo.jpg';
 
 const Navbar = () => {
   const { cartItems } = useContext(CartContext);
   const { user, logout } = useContext(AuthContext);
-  const [isScrolled, setIsScrolled] = useState(true); // Siempre true para fondo sólido
+  const [isScrolled, setIsScrolled] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
 
-  // Calcular cantidad total en carrito
+  // Calcular cartCount AQUÍ, dentro del componente
   const cartCount = cartItems?.reduce((total, item) => total + (item.quantity || 0), 0) || 0;
 
   useEffect(() => {
-    // Mantener navbar siempre con fondo sólido
     setIsScrolled(true);
   }, []);
 

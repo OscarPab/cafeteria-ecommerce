@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Image360 from '../components/Image360';
+import Carrusel360 from '../components/Carrusel360';
+import vid1 from '../assets/vid1.mp4';
+import vid2 from '../assets/vid2.mp4';
+import vid3 from '../assets/vid3.mp4';
+import vid4 from '../assets/vid4.mp4';
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -162,7 +166,7 @@ const Home = () => {
   const greenCoffeeVarieties = [
     {
       name: 'Oro Natural Superior',
-      origin: 'Veracruz, México',
+      origin: 'Xicotepec de Juárez, Puebla, México',
       altitude: '1,400 - 1,600 msnm',
       profile: 'Chocolate, nuez, caramelo',
       price: 'Consultar'
@@ -245,37 +249,87 @@ const Home = () => {
         <div className="panorama-container">
           <h2>Explora Nuestra Finca</h2>
           <p>Recorrido virtual 360° por nuestras instalaciones y cafetales</p>
-          <Image360 />
+          <Carrusel360 />
         </div>
       </section>
 
       {/* Sección de Videos */}
-      <section className="videos-section">
-        <div className="section-header">
-          <h2>Conoce Nuestra Historia</h2>
-          <p>Videos que muestran nuestra pasión por el café</p>
-        </div>
+<section className="videos-section">
+  <div className="section-header">
+    <h2>Conoce Nuestra Historia</h2>
+    <p>Videos que muestran nuestra pasión por el café</p>
+  </div>
 
-        <div className="videos-grid">
-          {videos.map(video => (
-            <div key={video.id} className="video-card">
-              <div className="video-container">
-                <iframe
-                  src={video.url}
-                  title={video.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="video-info">
-                <h3>{video.title}</h3>
-                <p>{video.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+  <div className="videos-grid">
+    <div className="video-card">
+      <div className="video-container">
+        <video 
+          src={vid1}
+          controls
+          poster="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+          className="video-player"
+        >
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+      <div className="video-info">
+        <h3>Recorrido por Nuestra Finca</h3>
+        <p>Conoce el proceso tradicional del café en nuestras instalaciones</p>
+      </div>
+    </div>
+
+    <div className="video-card">
+      <div className="video-container">
+        <video 
+          src={vid2}
+          controls
+          poster="https://images.unsplash.com/photo-1442512595331-e89e73853f31"
+          className="video-player"
+        >
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+      <div className="video-info">
+        <h3>Cata de Café con Román</h3>
+        <p>Aprende a identificar los mejores granos con nuestro experto</p>
+      </div>
+    </div>
+
+    <div className="video-card">
+      <div className="video-container">
+        <video 
+          src={vid3}
+          controls
+          poster="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+          className="video-player"
+        >
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+      <div className="video-info">
+        <h3>Cocina en Barro Ancestral</h3>
+        <p>La tradición de cocinar en ollas de barro para intensificar sabores</p>
+      </div>
+    </div>
+
+    <div className="video-card">
+      <div className="video-container">
+        <video 
+          src={vid4}
+          controls
+          poster="https://images.unsplash.com/photo-1461023058943-07fcbe16d735"
+          className="video-player"
+        >
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+      <div className="video-info">
+        <h3>De la Finca a tu Taza</h3>
+        <p>Todo el proceso de producción de nuestro café premium</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Productos Destacados */}
       <section className="featured-products">
@@ -326,7 +380,7 @@ const Home = () => {
             <p>
               Román Valderrábano representa la quinta generación de una familia dedicada 
               al cultivo y catación de café. Nuestra historia comenzó en las montañas 
-              de Veracruz, donde aprendimos a respetar cada grano y a entender que el 
+              de Xicotepec de Juárez, Puebla, donde aprendimos a respetar cada grano y a entender que el 
               verdadero café es un arte que se transmite de padres a hijos.
             </p>
             <p>
@@ -742,41 +796,41 @@ const Home = () => {
       </section>
 
       {/* Sección de Mapa */}
-      <section className="mapa-section">
-        <div className="mapa-container">
-          <h2>Visítanos</h2>
-          <p>Te esperamos en nuestra finca para vivir la experiencia del café</p>
+<section className="mapa-section">
+  <div className="mapa-container">
+    <h2>Visítanos</h2>
+    <p>Te esperamos en nuestra finca para vivir la experiencia del café</p>
 
-          <div className="mapa-wrapper">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.6954788998783!2d-97.9614830264746!3d20.271460381195027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d085564fd3d265%3A0xf644826230ec25e5!2sCaf%C3%A9%20El%20Catador!5e0!3m2!1ses-419!2smx!4v1772573023469!5m2!1ses-419!2smx"
-              title="Ubicación de Café El Catador"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <div className="mapa-overlay">
-              <h3>Café El Catador</h3>
-              <p>Carretera Federal México-Veracruz Km 45, Coatepec, Veracruz</p>
-            </div>
-          </div>
+    <div className="mapa-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880.387450255424!2d-97.964414!3d20.275843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d085564fd3d265%3A0xf644826230ec25e5!2sZaragoza%20146%2C%20Centro%2C%2073080%20Xicotepec%20de%20Ju%C3%A1rez%2C%20Pue.!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx"
+        title="Ubicación de Café El Catador"
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div className="mapa-overlay">
+        <h3>Café El Catador</h3>
+        <p>Zaragoza 146, Col Centro, Xicotepec de Juárez, Pue.</p>
+      </div>
+    </div>
 
-          <div className="mapa-info">
-            <div className="mapa-info-item">
-              <span>📍</span>
-              <span>Coatepec, Veracruz</span>
-            </div>
-            <div className="mapa-info-item">
-              <span>⏰</span>
-              <span>Lun-Sáb: 8am - 6pm</span>
-            </div>
-            <div className="mapa-info-item">
-              <span>📞</span>
-              <span>+52 228 123 4567</span>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="mapa-info">
+      <div className="mapa-info-item">
+        <span>📍</span>
+        <span>Zaragoza 146, Centro</span>
+      </div>
+      <div className="mapa-info-item">
+        <span>⏰</span>
+        <span>Lun-Sáb: 8am - 6pm</span>
+      </div>
+      <div className="mapa-info-item">
+        <span>📞</span>
+        <span>+52 228 123 4567</span>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Sección de Testimonios */}
       <section className="testimonials-section">

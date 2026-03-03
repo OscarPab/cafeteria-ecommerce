@@ -40,13 +40,13 @@ const VentaTonelada = () => {
     {
       id: 1,
       name: 'Oro Natural Superior',
-      origin: 'Veracruz, México',
+      origin: 'Xicotepec de Juárez, Puebla, México',
       altitude: '1,400 - 1,600 msnm',
       profile: 'Chocolate, nuez, caramelo',
       score: '85+',
       stock: 'Disponible',
       price: '$85,000 MXN/ton',
-      description: 'Nuestro café insignia. Granos seleccionados de las mejores fincas de Veracruz. Perfil balanceado con notas dulces y acidez media.'
+      description: 'Nuestro café insignia. Granos seleccionados de las mejores fincas de Xicotepec de Juárez, Puebla. Perfil balanceado con notas dulces y acidez media.'
     },
     {
       id: 2,

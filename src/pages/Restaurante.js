@@ -51,7 +51,7 @@ const Restaurante = () => {
       },
       {
         id: 6,
-        nombre: 'Pescado a la veracruzana',
+        nombre: 'Pescado a la Xicotepec de Juárez, Pueblaana',
         descripcion: 'Filete de pescado con salsa de jitomate, aceitunas, alcaparras y un toque de café',
         precio: '$200',
         imagen: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4',
@@ -96,7 +96,7 @@ const Restaurante = () => {
       {
         id: 11,
         nombre: 'Espresso de la casa',
-        descripcion: 'Shot de espresso con nuestro blend especial de granos veracruzanos',
+        descripcion: 'Shot de espresso con nuestro blend especial de granos Xicotepec de Juárez, Pueblaanos',
         precio: '$35',
         imagen: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085',
         tags: ['caliente', 'cafe']
@@ -246,9 +246,9 @@ const Restaurante = () => {
       </div>
     </div>
     <div className="buffet-item">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Pescado Veracruzano" />
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Pescado Xicotepec de Juárez, Pueblaano" />
       <div className="buffet-overlay">
-        <h3>Pescado Veracruzano</h3>
+        <h3>Pescado Xicotepec de Juárez, Pueblaano</h3>
         <p>Con salsa de jitomate y toque de café</p>
         <span className="price">$200</span>
       </div>
@@ -296,8 +296,8 @@ const Restaurante = () => {
             <h3>Contacto</h3>
             <p><strong>Teléfono:</strong> +52 (228) 123-4567</p>
             <p><strong>Email:</strong> restaurante@cafeelcatador.com</p>
-            <p><strong>Dirección:</strong> Carretera Federal México-Veracruz Km 45</p>
-            <p>Coatepec, Veracruz</p>
+            <p><strong>Dirección:</strong> Carretera Federal México-Xicotepec de Juárez, Puebla Km 45</p>
+            <p>Coatepec, Xicotepec de Juárez, Puebla</p>
           </div>
           
           <div className="info-card">

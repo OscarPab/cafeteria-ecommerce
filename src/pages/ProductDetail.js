@@ -28,11 +28,11 @@ const ProductDetail = () => {
           id: 1,
           nombre: 'Café Premium Altura',
           descripcion_corta: 'Grano seleccionado de nuestras mejores cosechas',
-          descripcion_larga: 'Café arábica cultivado a más de 1,500 msnm en las montañas de Veracruz. Notas a chocolate, nuez y caramelo. Tueste medio que resalta la dulzura natural del grano. Proceso de beneficio húmedo y secado al sol. Certificado orgánico y de comercio justo.',
+          descripcion_larga: 'Café arábica cultivado a más de 1,500 msnm en las montañas de Xicotepec de Juárez, Puebla. Notas a chocolate, nuez y caramelo. Tueste medio que resalta la dulzura natural del grano. Proceso de beneficio húmedo y secado al sol. Certificado orgánico y de comercio justo.',
           precio: 250,
           stock: 50,
           categoria: 'Café en Grano',
-          origen: 'Veracruz, México',
+          origen: 'Xicotepec de Juárez, Puebla, México',
           tostado: 'Medio',
           imagen_portada: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31',
           imagenes_extra: [
@@ -98,7 +98,7 @@ const ProductDetail = () => {
           precio: 350,
           stock: 20,
           categoria: 'Licor de Café',
-          origen: 'Veracruz, México',
+          origen: 'Xicotepec de Juárez, Puebla, México',
           imagen_portada: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd',
           imagenes_extra: [
             'https://images.unsplash.com/photo-1461023058943-07fcbe16d735',

@@ -7,19 +7,19 @@ export const CartProvider = ({ children }) => {
   const [cartTotal, setCartTotal] = useState(0);
 
   useEffect(() => {
-    // Cargar carrito del localStorage al iniciar
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
-      setCartItems(JSON.parse(savedCart));
+      try {
+        setCartItems(JSON.parse(savedCart));
+      } catch (e) {
+        console.error('Error parsing cart:', e);
+      }
     }
   }, []);
 
   useEffect(() => {
-    // Guardar carrito en localStorage cuando cambie
     localStorage.setItem('cart', JSON.stringify(cartItems));
-    
-    // Calcular total
-    const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const total = cartItems.reduce((sum, item) => sum + (item.price || 0) * (item.quantity || 0), 0);
     setCartTotal(total);
   }, [cartItems]);
 
@@ -30,7 +30,7 @@ export const CartProvider = ({ children }) => {
       if (existingItem) {
         return prevItems.map(item =>
           item.id === product.id
-            ? { ...item, quantity: item.quantity + quantity }
+            ? { ...item, quantity: (item.quantity || 0) + quantity }
             : item
         );
       }
