@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Carrusel360 from '../components/Carrusel360';
-import vid1 from '../assets/vid1.mp4';
-import vid2 from '../assets/vid2.mp4';
-import vid3 from '../assets/vid3.mp4';
-import vid4 from '../assets/vid4.mp4';
+import vid1 from '../assets/vd1.mp4';
+import vid2 from '../assets/vd2.mp4';
+import vid3 from '../assets/vd3.mp4';
+import vid4 from '../assets/vd4.mp4';
 
 const Home = () => {
   const [formData, setFormData] = useState({
