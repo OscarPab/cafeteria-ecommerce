@@ -90,37 +90,7 @@ const Home = () => {
     console.log('Contacto comercial:', contactData);
   };
 
-  // Videos de YouTube (reemplazar con los tuyos después)
-  const videos = [
-    {
-      id: 1,
-      title: "Recorrido por Nuestra Finca",
-      description: "Conoce el proceso tradicional del café en nuestras instalaciones",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735"
-    },
-    {
-      id: 2,
-      title: "Cata de Café con Román",
-      description: "Aprende a identificar los mejores granos con nuestro experto",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
-    },
-    {
-      id: 3,
-      title: "Cocina en Barro Ancestral",
-      description: "La tradición de cocinar en ollas de barro para intensificar sabores",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
-    },
-    {
-      id: 4,
-      title: "De la Finca a tu Taza",
-      description: "Todo el proceso de producción de nuestro café premium",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      thumbnail: "https://images.unsplash.com/photo-1442512595331-e89e73853f31"
-    }
-  ];
+  
 
   // Productos destacados
   const featuredProducts = [
@@ -253,7 +223,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Sección de Videos */}
+
+{/* Sección de Videos */}
 <section className="videos-section">
   <div className="section-header">
     <h2>Conoce Nuestra Historia</h2>
@@ -264,11 +235,11 @@ const Home = () => {
     <div className="video-card">
       <div className="video-container">
         <video 
-          src={vid1}
           controls
-          poster="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+          preload="metadata"
           className="video-player"
         >
+          <source src="./assets/vd1.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
@@ -281,11 +252,11 @@ const Home = () => {
     <div className="video-card">
       <div className="video-container">
         <video 
-          src={vid2}
           controls
-          poster="https://images.unsplash.com/photo-1442512595331-e89e73853f31"
+          preload="metadata"
           className="video-player"
         >
+          <source src="/assets/vd2.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
@@ -298,11 +269,11 @@ const Home = () => {
     <div className="video-card">
       <div className="video-container">
         <video 
-          src={vid3}
           controls
-          poster="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+          preload="metadata"
           className="video-player"
         >
+          <source src="/assets/vd3.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
@@ -315,11 +286,11 @@ const Home = () => {
     <div className="video-card">
       <div className="video-container">
         <video 
-          src={vid4}
           controls
-          poster="https://images.unsplash.com/photo-1461023058943-07fcbe16d735"
+          preload="metadata"
           className="video-player"
         >
+          <source src="/assets/vd4.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
@@ -330,6 +301,7 @@ const Home = () => {
     </div>
   </div>
 </section>
+
 
       {/* Productos Destacados */}
       <section className="featured-products">
