@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Carrusel360 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(false); // CAMBIADO a false
 
   const imagenes = [
     {
@@ -87,21 +87,7 @@ const Carrusel360 = () => {
         <button className="carrusel-nav-btn next" onClick={nextImage}>→</button>
       </div>
 
-      <div className="carrusel-360-thumbnails">
-        {imagenes.map((img, index) => (
-          <div
-            key={index}
-            className={`thumbnail ${currentIndex === index ? 'active' : ''}`}
-            onClick={() => {
-              setCurrentIndex(index);
-              setIsAutoPlaying(false);
-            }}
-          >
-            <img src={img.url} alt={img.titulo} />
-            <span className="thumbnail-number">{index + 1}</span>
-          </div>
-        ))}
-      </div>
+      {/* SECCIÓN DE MINIATURAS ELIMINADA */}
 
       <div className="carrusel-360-controls">
         <button 
